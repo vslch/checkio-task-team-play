@@ -1,20 +1,44 @@
 <!-- Describe task in general -->
 
 <p>
-    Sum two passed ints
-</p>
-
-<p style="text-align: center;">
-    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
+    Two teams of robots are playing the game of <i>cut-or-bend</i>. 
+	The rules of the game are very simple:
+	<ul>
+		<li>
+		The team that has processed more details than its opponent is
+		the winner.
+		</li>
+		<li>
+		A detail is considered to be processed if it is either bent or cut.
+		</li>
+		<li>
+		Each robot is able to bend and cut but during the game it can perform
+		only one function.
+		</li>
+		<li>
+		Each team consists of N players, K of them must be occupied with cutting. 
+		All the rest must be occupied with bending. 
+		</li>
+	</ul>
+	Suppose you are the coach of one of these teams. You are given two lists of
+	of positive integers both of size N representing stats of your team. The i-th
+	value in the first list is the number of details which can be cut by the i-th
+	member of the team during the game. Similarly the i-th value in the second list 
+	is the number of details which can be bent by the i-th member of the team during 
+	the game. Knowing the value of K calculate the maximum score which can 
+	be obtained by your team.
 </p>
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Input: </strong> Two arguments. Both are ints.
+    <strong>Input: </strong> 
+	Three arguments. Two lists of integers of equal size representing team's stats. 
+	An integer - number of team's members that has to be occupied with cutting.
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Output: </strong> 
+	An integer - maximum score which can be obtained by the team. 
 </p>
 
 
@@ -24,16 +48,11 @@
         <strong>Example:</strong>
     </p>
 
-{% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">sumTwo(2, 3) == 5
-sumTwo(5, 7) == 12
+<pre class="brush: python">
+max_score([4, 2, 1], [2, 5, 3], 2) == 10
+max_score([7, 1, 4, 4], [5, 3, 4, 3], 2) == 18
+max_score([5, 5, 5], [5, 5, 5], 1) == 15
 </pre>
-{% else %}
-<pre class="brush: python">sum_two(2, 3) == 5
-sum_two(5, 7) == 12
-</pre>
-{% endif %}
-</div>
 
 
 <!-- Here you can explain how it can be used in development -->
@@ -41,12 +60,19 @@ sum_two(5, 7) == 12
 <p class="for_info_only">
 
     <strong>How it’s used: </strong>
-    <i>(math is used everywhere)</i>
+    <i>
+	This is a discrete optimization puzzle. As Leonhard Euler has stated,
+	"Nothing in the world takes place without optimization, and there is no 
+	doubt that all aspects of the world that have rational basis can be 
+	explained by optimization methods."
+	</i>
 </p>
 
 <!-- Here you can explain some constraints for input-->
 <!-- The section is optional -->
 <p>
-    <strong>Precondition:</strong>
-    <i>both given ints should be between -1000 and 1000</i>
+    <strong>Precondition:</strong></br>
+    2 &le; N &le; 100 </br>
+	1 &le; K &le; N </br>
+	1 &le; list[i] &le; 100
 </p>
