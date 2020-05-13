@@ -1,6 +1,6 @@
 from typing import List
 
-def max_score(cut: List[int], bend: List[int], K: int) -> int:
+def max_score(cut: List[int], bend: List[int], k: int) -> int:
     #replace this for solution
     return 1
 
