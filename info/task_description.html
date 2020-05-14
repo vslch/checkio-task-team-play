@@ -46,9 +46,21 @@
     <p>
         <strong>Example:</strong>
     </p>
-
+Consider having input to be <i>[4, 2, 1], [2, 5, 3], 2</i>. The best score is obtained 
+by assigning the first and the third robots to perform cutting and the third robot 
+to perform bending.
+<pre class="brush: python">
+cut : [4, _, 1] -> total:  5
+bend: [_, 5, _] -> total:  5
+------------------------------
+                   total: 10
+</pre>
+It follows that:
 <pre class="brush: python">
 max_score([4, 2, 1], [2, 5, 3], 2) == 10
+</pre>
+More examples:
+<pre class="brush: python">
 max_score([7, 1, 4, 4], [5, 3, 4, 3], 2) == 18
 max_score([5, 5, 5], [5, 5, 5], 1) == 15
 </pre>
